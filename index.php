@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Stylesheet/style.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <title>Ordering System:</title>
 </head>
 
 <body>
-    <img src="/images/dropping donuts.png" alt="logo">
+    <!-- Logo -->
+    <img src="dropping donuts.png" alt="logo" width="500px">
+
+    <!-- Form -->
     <form action="checkout.php" method="post">
 
         <label for="firstName">First Name:</label>
@@ -23,7 +27,7 @@
         <input type="email" name="emailAddress" id="emailAddress" required placeholder="david@gmail.com"><br>
 
         <label for="contactNumber">Contact:</label>
-        <input type="tel" name="contactNumber" id="contactNumber" required placeholder="071 123 4567">
+        <input type="tel" name="contactNumber" id="contactNumber" required placeholder="071 123 4567"><br>
 
 
 

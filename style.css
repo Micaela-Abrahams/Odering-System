@@ -1,0 +1,30 @@
+body {
+    background-color: #fdd7e0;
+}
+
+/* Style for image tag */
+img {
+    margin-left: 30%;
+}
+
+/* Style for the Form tag */
+form {
+    margin-left: 30%;
+}
+
+#emailAddress {
+    margin-top: 20px;
+}
+
+#contactNumber {
+    margin-top: 20px;
+}
+
+#checkout {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 30px;
+    color: white;
+}
