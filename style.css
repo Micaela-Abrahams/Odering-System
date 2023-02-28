@@ -1,30 +1,107 @@
-body {
-    background-color: #fdd7e0;
-}
+  /* Import Google Font: Nunito */
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Shantell+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+  /* Style for body background */
 
-/* Style for image tag */
-img {
-    margin-left: 30%;
-}
 
-/* Style for the Form tag */
-form {
-    margin-left: 30%;
-}
 
-#emailAddress {
-    margin-top: 20px;
-}
+  /* Style for image tag */
+  #brand-logo {
+      margin-left: 30%;
+      margin-bottom: 30px;
+      border: #fdd7e0 solid;
+      border-radius: 10px;
 
-#contactNumber {
-    margin-top: 20px;
-}
+  }
 
-#checkout {
-    margin-top: 20px;
-}
+  /* Style for the Form tag */
+  form {
+      margin-left: 30%;
+  }
 
-label {
-    font-size: 30px;
-    color: white;
-}
+  #emailAddress {
+      margin-top: 20px;
+      width: 300px;
+  }
+
+  #contactNumber {
+      margin-top: 20px;
+  }
+
+  #checkout {
+      margin-top: 20px;
+  }
+
+  /* Style for labels */
+  label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      color: black;
+      padding-right: 7px;
+  }
+
+  #firstName {
+      margin-right: 10px;
+  }
+
+  input {
+      /* border-color: lightgray; */
+      height: 30px;
+      /* border-radius: 10px; */
+      text-align: left;
+      padding-left: 7px;
+  }
+
+  /* Style fpr the outline color of input tag when in focus */
+  input:focus {
+      outline-color: #FFB3D9;
+  }
+
+  .plain-donut {
+      position: relative;
+      width: 300px;
+      height: 330px;
+      background-color: rgba(247, 246, 246, 0.977);
+      border: rgba(211, 211, 211, 0.916) solid;
+      border-width: thin;
+  }
+
+  .plain-donut input[type="checkbox"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 10px;
+  }
+
+
+  .plain-donut img {
+      margin-left: 0;
+      width: 300px;
+      height: 180px;
+      border: none;
+      border-radius: none;
+  }
+
+  .cardBody-1 {
+      padding: 10px;
+  }
+
+  #plain-donut-title {
+      margin-top: 0;
+      font-family: 'Lato', sans-serif;
+      margin-bottom: -6px;
+  }
+
+  #plain-donut-description {
+      font-size: 14px;
+      font-family: 'Lato', sans-serif;
+  }
+
+  #quantity {
+      font-size: 14px;
+      font-family: 'Lato', sans-serif;
+  }
+
+  .plain-donut-price {
+      font-size: 14px;
+      font-family: 'Lato', sans-serif;
+  }
