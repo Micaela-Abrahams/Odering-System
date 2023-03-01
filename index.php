@@ -22,7 +22,7 @@
         <!-- Form -->
         <form action="checkout.php" method="post">
 
-            <div id="form-inputs">
+            <div id="form-inputs-box">
                 <label for="firstName">First Name:</label>
                 <input type="text" name="firstName" id="firstName" required placeholder="First Name">
 
@@ -43,12 +43,11 @@
             </div>
 
             <!-- Plain Donut -->
-            <h3>Build a Donut</h3>
             <div class="plain-donut">
 
                 <input type="checkbox" name="plain-donut-checkbox" id="plain-donut-checkbox">
 
-                <img src="Plain-Doughnut.webp" alt="plain-donut">
+                <img src="plain donut 1.jpg" alt="plain-donut">
 
 
                 <div class="cardBody-1">
@@ -66,7 +65,7 @@
             <div id="glaze-box">
                 <h3 id="glaze-heading">Select A Glaze (Only 1 Required):</h3>
                 <select name="glaze-select" id="glaze-select">
-                    <option value="plain" name="plain">Plain (Default)</option>
+                    <option value="none-glaze" name="none-glaze">None (Default)</option>
                     <option value="vanilla-glaze" name="vanilla-glaze">Vanilla Glaze - R2.00
                     <option value="chocolate-glaze" name="chocolate-glaze">Chocolate Glaze - R2.00
                     <option value="strawberry-glaze" name="strawberry-glaze">Strawberry Glaze - R2.00
@@ -106,18 +105,12 @@
                         <input type="checkbox" name="nuts-checkbox" id="nuts-checkbox">
                     </div>
 
-
-                    <!-- Fruit -->
-                    <div id="fruit-box">
-                        <label for="fruit-label" name="fruit-label" id="fruit-label">Mixed Fruit:</label>
-                        <input type="checkbox" name="fruit-checkbox" id="fruit-checkbox">
-                    </div>
                 </div>
 
                 <div id="row-bottom">
                     <!-- Icing -->
                     <div id="icing-box">
-                        <label for="icing-label" name="icing-label" id="icing-label">Icing:</label>
+                        <label for="icing-label" name="icing-label" id="icing-label">Icing Sugar:</label>
                         <input type="checkbox" name="icing-checkbox" id="icing-checkbox">
                     </div>
 
@@ -136,7 +129,7 @@
 
                     <!-- Coconut -->
                     <div id="coconut-box">
-                        <label for="coconut-label" name="coconut-label" id="coconut-label">Coconut:</label>
+                        <label for="coconut-label" name="coconut-label" id="coconut-label">Coconut Flakes:</label>
                         <input type="checkbox" name="coconut-checkbox" id="coconut-checkbox">
                     </div>
                 </div>
@@ -146,14 +139,14 @@
             <div id="filling-box">
                 <h3 id="filling-heading">Select a Filling (Only 1 Required):</h3>
                 <select name="filling-select" id="filling-select">
-                    <option value="filling-none" name="filling-none">None</option>
-                    <option value="strawberry-jam" name="strawberry-jam">Jam (Strawberry) - R2.00</option>
-                    <option value="blueberry-jam" name="blueberry-jam">Jam (Blueberry) - R2.00</option>
-                    <option value="raspberry-jam" name="raspberry-jam">Jam (Raspberry) - R2.00</option>
-                    <option value="vanilla" name="vanilla">Vanilla - R2.00</option>
-                    <option value="chocolate" name="chocolate">Chocolate - R2.00</option>
-                    <option value="strawberry" name="strawberry">Strawberry - R2.00</option>
-                    <option value="nutella" name="nutella">Nutella - R2.00</option>
+                    <option value="filling-none" name="filling-none">None (Default)</option>
+                    <option value="strawberry-jam" name="strawberry-jam">Strawberry Jam - R2.00</option>
+                    <option value="blueberry-jam" name="blueberry-jam">Blueberry Jam - R2.00</option>
+                    <option value="custard" name="custard">Custard - R2.00</option>
+                    <option value="vanilla" name="vanilla">Vanilla Filling - R2.00</option>
+                    <option value="chocolate" name="chocolate">Chocolate Filling - R2.00</option>
+                    <option value="strawberry" name="strawberry">Strawberry Filling - R2.00</option>
+                    <option value="nutella" name="nutella">Nutella Spread - R2.00</option>
                     <option value="marshmallow-fluff" name="marshmallow-fluff">Marshmallow Fluff - R2.00</option>
                 </select>
             </div>
@@ -165,11 +158,10 @@
                 <input type="number" name="num-donuts-input" id="num-donuts-input" min="1" max="10" value="1">
             </div>
 
-
-
             <br>
 
-            <input type="submit" name="checkout" id="checkout" value=checkout>
+            <!-- Checkout Button -->
+            <input type="submit" name="checkout" id="checkout" value="Submit Order">
 
         </form>
     </div>
