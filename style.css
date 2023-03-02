@@ -11,7 +11,7 @@
       width: 700px;
       height: 1400px;
       /* background-color: rgba(247, 246, 246, 0.977); */
-      border: #E3A765 solid;
+      border: #e9b986 solid;
       border-width: medium;
   }
 
@@ -35,19 +35,34 @@
       color: rgb(105, 105, 105);
   }
 
+  /* Form Title */
+  #dropping-donuts-title {
+      text-align: center;
+      margin-top: -85px;
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-size: 50px;
+  }
+
   /* Style for image tag */
 
   #image-background {
       width: 700px;
       height: 130px;
-      background-color: #E3A765;
-      border-color: #E3A765;
+      background-color: #e9b986;
+      border-color: #e9b986;
   }
 
-  #brand-logo {
-      margin-left: 16%;
-      margin-bottom: 30px;
+  /* Animated Donut Image Left */
+  #brand-logo-1 {
+      margin-top: 8px;
+  }
 
+  /* Animated Donut Image Right */
+  #brand-logo-2 {
+      margin-left: 85%;
+      margin-top: -300px;
+      margin-bottom: 30px;
   }
 
   .order-form-title {

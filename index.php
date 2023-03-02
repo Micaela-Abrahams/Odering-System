@@ -14,7 +14,9 @@
     <div id="form-body">
         <!-- Logo -->
         <div id="image-background">
-            <img src="dropping donuts.png" alt="logo" width="480px" id="brand-logo">
+            <img src="animated donut.png" alt="logo" width="100px" id="brand-logo-1">
+            <h1 id="dropping-donuts-title">Dropping Donuts</h1>
+            <img src="animated donut.png" alt="logo" width="100px" id="brand-logo-2">
         </div>
         <h3 class="order-form-title">Donut Order Form:</h3>
         <p class="requirements">Enter your details for the below required fields.</p>
