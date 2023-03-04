@@ -34,10 +34,37 @@
         <div class="order-details">
             <p>Date: <?php echo htmlspecialchars($_GET['date']); ?></p>
             <p>Collection Time: <?php echo htmlspecialchars($_GET['time']); ?></p>
+
             <p>Plain Donut: <?php echo htmlspecialchars($_GET['plainDonut']); ?></p>
+            <p><?php
+                /*
+            * Check if plainDonutCost is set in the query string
+            *If its set, the value is retrieved using $_GET 
+            *number_format is used to display it as currency value*/
+                if (isset($_GET['plainDonutCost'])) {
+                    $plainDonutCost = $_GET['plainDonutCost'];
+                    echo "R" . number_format($plainDonutCost, 2);
+                } ?></p>
+
+
             <p>Glaze: <?php echo htmlspecialchars($_GET['glazeSelect']); ?></p>
+            <p>
+                <?
+                if (isset($_GET['glazeCost'])) {
+                    $glazeSelect = $_GET['glazeCost'];
+                    echo "R" . number_format($glazeCost, 2);
+                }
+                ?>
+            </p>
+
+
+
+
             <p>Toppings: <?php echo htmlspecialchars($_GET['toppings']); ?></p>
             <p>Filling: <?php echo htmlspecialchars($_GET['fillingSelect']); ?></p>
+            <p>Number of Donuts: <?php echo htmlspecialchars($_GET['numberOfDonuts']); ?></p>
+
+            <h5>Subtotal:</h5>
         </div>
 
 

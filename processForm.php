@@ -9,37 +9,34 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $date = $_POST['date'];
     $time = $_POST['time'];
 
-    // Echoed user data
-    echo "Name: $name" . '</br>';
-    echo "Email: $email" . '</br>';
-    echo "Contact Number: $contact" . '</br>';
-    echo "Date: $date" . '</br>';
-    echo "Collection Time: $time" . '</br>';
-
-
     // Check if checkbox for Plain Donut was checked off
-    $plainDonut = $_POST['plain-donut-checkbox'];
-
     if (isset($_POST['plain-donut-checkbox'])) {
         $plainDonut = $_POST['plain-donut-checkbox']; //Variable for Plain Donut Checkbox
+        $plainDonutCost = 4.00; //Cost of Plain Donut
 
-        echo $plainDonut . '</br>';
     } else {
         echo "Error, plain donut was not selected";
     }
 
+
     // Checks if glaze is selected
     if (isset($_POST['glaze-select'])) {
         $glazeSelect = $_POST['glaze-select'];
-        echo "Selected Glaze: $glazeSelect " . '</br>';
+        $glazeCost = 2.00;
+
+        if ($glazeSelect == 'None') {
+            $glazeCost = 0.00;
+        } else {
+            $glazeCost = 2.00;
+        }
     }
 
     // Check if the Toppings were selected:
-    $toppings = $_POST['toppings']; // Toppings array for the boxes the user checked
-    $max_toppings = 3; //Maximum number of toppings allowed
-    $checkedCount = count($_POST['toppings']); //Array Length
-
     if (isset($_POST['toppings'])) {
+
+        $toppings = $_POST['toppings']; // Toppings array for the boxes the user checked
+        $max_toppings = 3; //Maximum number of toppings allowed
+        $checkedCount = count($_POST['toppings']); //Array Length
 
         // if the length of the toppings is greater than 3 echo an error, else echo the array
         if ($checkedCount > $max_toppings) {
@@ -58,16 +55,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         echo "Filling: $fillingSelect" . '</br>';
     }
 
-
-
-
     // Check the number of Donuts:
     if (isset($_POST['num-donuts-input'])) {
         $numberOfDonuts = $_POST['num-donuts-input'];
         echo "Number of Donuts: $numberOfDonuts" . '</br>';
     }
 }
-
 // Redirect User to Payment Page
-header('Location: payment.php?name=' . urlencode($name) . '&email=' . urlencode($email) . '&contact=' . urlencode($contact) . '&date=' . urlencode($date) . '&time=' . urlencode($time) . '&plainDonut=' . urlencode($plainDonut) . '&glazeSelect=' . urlencode($glazeSelect) . '&toppings=' . urlencode(implode(',', $toppings)) . '&fillingSelect=' . urlencode($fillingSelect) . '&numberOfDonuts=' . urlencode($numberOfDonuts));
+header('Location: payment.php?name=' . urlencode($name) . '&email=' . urlencode($email) . '&contact=' . urlencode($contact) . '&date=' . urlencode($date) . '&time=' . urlencode($time) . '&plainDonut=' . urlencode($plainDonut) . '&glazeSelect=' . urlencode($glazeSelect) . '&toppings=' . urlencode(implode(',', $toppings)) . '&fillingSelect=' . urlencode($fillingSelect) . '&numberOfDonuts=' . urlencode($numberOfDonuts) . '&plainDonutCost=' . urlencode($plainDonutCost) . '&glazeCost=' . urldecode($glazeCost));
 exit();
