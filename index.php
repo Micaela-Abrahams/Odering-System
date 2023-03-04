@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Ordering System:</title>
 </head>
 
@@ -14,15 +14,15 @@
     <div id="form-body">
         <!-- Logo -->
         <div id="image-background">
-            <img src="animated donut.png" alt="logo" width="100px" id="brand-logo-1">
+            <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
             <h1 id="dropping-donuts-title">Dropping Donuts</h1>
-            <img src="animated donut.png" alt="logo" width="100px" id="brand-logo-2">
+            <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
         </div>
         <h3 class="order-form-title">Donut Order Form:</h3>
         <p class="requirements">Enter your details for the below required fields.</p>
 
         <!-- Form -->
-        <form action="checkout.php" method="post">
+        <form action="processForm.php" method="post">
 
             <div id="form-inputs-box">
                 <label for="firstName">First Name:</label>
@@ -47,9 +47,9 @@
             <!-- Plain Donut -->
             <div class="plain-donut">
 
-                <input type="checkbox" name="plain-donut-checkbox" id="plain-donut-checkbox">
+                <input type="checkbox" name="plain-donut-checkbox" id="plain-donut-checkbox" required value="Plain Donut">
 
-                <img src="plain donut 1.jpg" alt="plain-donut">
+                <img src="images/plain donut 1.jpg" alt="plain-donut">
 
 
                 <div class="cardBody-1">
@@ -63,16 +63,16 @@
             </div>
 
             <!-- Choose a Glaze -->
-
             <div id="glaze-box">
                 <h3 id="glaze-heading">Select A Glaze (Only 1 Required):</h3>
-                <select name="glaze-select" id="glaze-select">
-                    <option value="none-glaze" name="none-glaze">None (Default)</option>
-                    <option value="vanilla-glaze" name="vanilla-glaze">Vanilla Glaze - R2.00
-                    <option value="chocolate-glaze" name="chocolate-glaze">Chocolate Glaze - R2.00
-                    <option value="strawberry-glaze" name="strawberry-glaze">Strawberry Glaze - R2.00
-                    <option value="lemon-glaze" name="lemon-glaze">Lemon Glaze - R2.00
-                    <option value="Cinnamon-sugar-glaze" name="Cinnamon-sugar-glaze">Cinnamon Sugar Glaze - R2.00
+                <select name="glaze-select" id="glaze-select" required>
+                    <option value="" disabled selected>Select a glaze</option>
+                    <option value="None" name="None">None</option>
+                    <option value="Vanilla Glaze" name="Vanilla Glaze">Vanilla Glaze - R2.00
+                    <option value="Chocolate Glaze" name="Chocolate Glaze">Chocolate Glaze - R2.00
+                    <option value="Strawberry Glaze" name="Strawberry Glaze">Strawberry Glaze - R2.00
+                    <option value="Lemon Glaze" name="Lemon Glaze">Lemon Glaze - R2.00
+                    <option value="Cinnamon Sugar Glaze" name="Cinnamon Sugar Glaze">Cinnamon Sugar Glaze - R2.00
                     </option>
                 </select>
             </div>
@@ -86,25 +86,25 @@
                     <!-- None -->
                     <div id="none-box">
                         <label for="none-label" name="none-label" id="none-label">None:</label>
-                        <input type="checkbox" name="none-checkbox" id="none-checkbox">
+                        <input type="checkbox" name="toppings[]" id="none-checkbox" value="None">
                     </div>
 
                     <!-- Sprinkles -->
                     <div id="sprinkle-box">
                         <label for="sprinkles-label" name="sprinkles-label" id="sprinkles-label">Sprinkles:</label>
-                        <input type="checkbox" name="sprinkles-checkbox" id="sprinkles-checkbox">
+                        <input type="checkbox" name="toppings[]" id="sprinkles-checkbox" value="Sprinkles">
                     </div>
 
                     <!-- Chocolate Chips -->
                     <div id="chocolate-chip-box">
                         <label for="chocolate-chip-label" name="chocolate-chip-label" id="chocolate-chip-label">Chocolate Chips:</label>
-                        <input type="checkbox" name="chocolate-chip-checkbox" id="chocolate-chip-checkbox">
+                        <input type="checkbox" name="toppings[]" id="chocolate-chip-checkbox" value="Chocolate Chips">
                     </div>
 
                     <!-- Nuts -->
                     <div id="nuts-box">
                         <label for="nuts-label" name="nuts-label" id="nuts-label">Nuts:</label>
-                        <input type="checkbox" name="nuts-checkbox" id="nuts-checkbox">
+                        <input type="checkbox" name="toppings[]" id="nuts-checkbox" value="Nuts">
                     </div>
 
                 </div>
@@ -113,26 +113,25 @@
                     <!-- Icing -->
                     <div id="icing-box">
                         <label for="icing-label" name="icing-label" id="icing-label">Icing Sugar:</label>
-                        <input type="checkbox" name="icing-checkbox" id="icing-checkbox">
+                        <input type="checkbox" name="toppings[]" id="icing-checkbox" value="Icing Sugar">
                     </div>
 
                     <!-- Caramel -->
                     <div id="caramel-box">
                         <label for="caramel-label" name="caramel-label" id="caramel-label">Caramel:</label>
-                        <input type="checkbox" name="caramel-checkbox" id="caramel-checkbox">
+                        <input type="checkbox" name="toppings[]" id="caramel-checkbox" value="Caramel">
                     </div>
-
 
                     <!-- Marshmallows -->
                     <div id="marshmallow-box">
                         <label for="marshmallow-label" name="marshmallow-label" id="marshmallow-label">Marshmallows:</label>
-                        <input type="checkbox" name="marshmallow-checkbox" id="marshmallow-checkbox">
+                        <input type="checkbox" name="toppings[]" id="marshmallow-checkbox" value="Marshmallows">
                     </div>
 
                     <!-- Coconut -->
                     <div id="coconut-box">
                         <label for="coconut-label" name="coconut-label" id="coconut-label">Coconut Flakes:</label>
-                        <input type="checkbox" name="coconut-checkbox" id="coconut-checkbox">
+                        <input type="checkbox" name="toppings[]" id="coconut-checkbox" value="Coconut Flakes">
                     </div>
                 </div>
             </div>
@@ -140,16 +139,17 @@
             <!-- Select a Filing: -->
             <div id="filling-box">
                 <h3 id="filling-heading">Select a Filling (Only 1 Required):</h3>
-                <select name="filling-select" id="filling-select">
-                    <option value="filling-none" name="filling-none">None (Default)</option>
-                    <option value="strawberry-jam" name="strawberry-jam">Strawberry Jam - R2.00</option>
-                    <option value="blueberry-jam" name="blueberry-jam">Blueberry Jam - R2.00</option>
-                    <option value="custard" name="custard">Custard - R2.00</option>
-                    <option value="vanilla" name="vanilla">Vanilla Filling - R2.00</option>
-                    <option value="chocolate" name="chocolate">Chocolate Filling - R2.00</option>
-                    <option value="strawberry" name="strawberry">Strawberry Filling - R2.00</option>
-                    <option value="nutella" name="nutella">Nutella Spread - R2.00</option>
-                    <option value="marshmallow-fluff" name="marshmallow-fluff">Marshmallow Fluff - R2.00</option>
+                <select name="filling-select" id="filling-select" required>
+                    <option value="" disabled selected>Select a filling</option>
+                    <option value="None" name="None">None</option>
+                    <option value="Strawberry Jam" name="Strawberry Jam">Strawberry Jam - R2.00</option>
+                    <option value="Blueberry Jam" name="Blueberry Jam">Blueberry Jam - R2.00</option>
+                    <option value="Custard" name="Custard">Custard - R2.00</option>
+                    <option value="Vanilla" name="Vanilla">Vanilla Filling - R2.00</option>
+                    <option value="Chocolate" name="Chocolate">Chocolate Filling - R2.00</option>
+                    <option value="Strawberry" name="Strawberry">Strawberry Filling - R2.00</option>
+                    <option value="Nutella Spread" name="Nutella Spread">Nutella Spread - R2.00</option>
+                    <option value="Marshmallow Fluff" name="Marshmallow Fluff">Marshmallow Fluff - R2.00</option>
                 </select>
             </div>
 
@@ -169,7 +169,7 @@
     </div>
 
 
-    <script src="/Javascript/script.js"></script>
+
 </body>
 
 </html>

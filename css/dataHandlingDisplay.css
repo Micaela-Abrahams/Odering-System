@@ -1,0 +1,63 @@
+ /* Import Google Font: Nunito */
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Shantell+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+ /* Import Google Font: Noto Sans Korean */
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Noto+Sans+KR:wght@100;300;400&family=Nunito:ital,wght@0,200;0,300;0,500;1,200;1,300&family=Shantell+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+ /* Style for body background */
+ #form-body {
+     margin-left: 20%;
+     width: 700px;
+     height: 1400px;
+     border: #e9b986 solid;
+     border-width: medium;
+ }
+
+ /* Style for image tag */
+ #image-background {
+     width: 700px;
+     height: 130px;
+     background-color: #e9b986;
+     border-color: #e9b986;
+ }
+
+ /* Form Title */
+ #dropping-donuts-title {
+     text-align: center;
+     margin-top: -85px;
+     color: white;
+     font-family: 'Nunito', sans-serif;
+     font-size: 50px;
+ }
+
+ /* Animated Donut Image Left */
+ #brand-logo-1 {
+     margin-top: 8px;
+ }
+
+ /* Animated Donut Image Right */
+ #brand-logo-2 {
+     margin-left: 85%;
+     margin-top: -300px;
+     margin-bottom: 30px;
+ }
+
+ /* Customer Details Title */
+ #customer-details-title {
+     text-align: center;
+     font-family: 'Nunito', sans-serif;
+     margin-top: 20px;
+     margin-left: 12px;
+     font-size: 20px;
+ }
+
+ /* Container fpr Customer Details */
+ #customer-details-container {
+     width: 450px;
+     background-color: rgba(247, 246, 246, 0.977);
+     border: rgba(211, 211, 211, 0.916) solid;
+     border-width: thin;
+     height: 150px;
+     margin-left: 140px;
+     padding: 10px 10px 10px 10px;
+ }
