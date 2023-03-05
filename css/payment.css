@@ -11,6 +11,7 @@
      height: 1400px;
      border: #e9b986 solid;
      border-width: medium;
+
  }
 
  /* Style for image tag */
@@ -21,7 +22,7 @@
      border-color: #e9b986;
  }
 
- /* Form Title */
+ /* Form Title -DROPPING DONUTS */
  #dropping-donuts-title {
      text-align: center;
      margin-top: -85px;
@@ -42,7 +43,8 @@
      margin-bottom: 30px;
  }
 
- /* Customer Details Title */
+
+ /* CUSTOMER DETAILS */
  #customer-details-title {
      text-align: center;
      font-family: 'Nunito', sans-serif;
@@ -53,11 +55,61 @@
 
  /* Container fpr Customer Details */
  #customer-details-container {
-     width: 450px;
+     width: 100%;
      background-color: rgba(247, 246, 246, 0.977);
      border: rgba(211, 211, 211, 0.916) solid;
      border-width: thin;
      height: 150px;
      margin-left: 140px;
      padding: 10px 10px 10px 10px;
+ }
+
+ /* ORDER DETAILS */
+ #order-details-title {
+     text-align: center;
+     font-family: 'Nunito', sans-serif;
+     margin-top: 20px;
+     margin-left: 12px;
+     font-size: 20px;
+     margin-top: 30px;
+ }
+
+ #table1 {
+     width: 100%;
+     background-color: rgba(247, 246, 246, 0.977);
+     border: rgba(211, 211, 211, 0.916) solid;
+     border-width: thin;
+ }
+
+ td {
+     border: rgba(211, 211, 211, 0.916) solid;
+     border-width: thin;
+     padding: 15px;
+ }
+
+ #item-title {
+     font-size: 20px;
+     padding: 10px;
+ }
+
+ #cost-title {
+     font-size: 20px;
+     padding: 10px;
+ }
+
+ /* ORDER TOTAL */
+ #order-total-title {
+     text-align: center;
+     font-family: 'Nunito', sans-serif;
+     margin-top: 20px;
+     margin-left: 12px;
+     font-size: 20px;
+     margin-top: 30px;
+ }
+
+ #table2 {
+     width: 100%;
+     background-color: rgba(247, 246, 246, 0.977);
+     border: rgba(211, 211, 211, 0.916) solid;
+     border-width: thin;
  }

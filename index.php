@@ -37,10 +37,10 @@
                 <label for="contactNumber">Contact:</label>
                 <input type="tel" name="contactNumber" id="contactNumber" required placeholder="(+27) 71 123 4567"><br>
 
-                <label for="date">Date:</label>
+                <label for="date">Collection Date:</label>
                 <input type="date" name="date" value="date" id="date" required>
 
-                <label for="time">Time:</label>
+                <label for="time">Collection Time:</label>
                 <input type="time" name="time" value="time" id="date" required><br>
             </div>
 
