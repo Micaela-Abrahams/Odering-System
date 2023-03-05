@@ -14,8 +14,10 @@
     <div id="form-body">
         <!-- Logo -->
         <div id="image-background">
+            <!-- Donut Image Left -->
             <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
             <h1 id="dropping-donuts-title">Dropping Donuts</h1>
+            <!-- Donut Image Right -->
             <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
         </div>
         <h3 class="order-form-title">Donut Order Form:</h3>

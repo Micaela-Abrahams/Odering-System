@@ -8,7 +8,7 @@
  #form-body {
      margin-left: 20%;
      width: 700px;
-     height: 1400px;
+     height: 1330px;
      border: #e9b986 solid;
      border-width: medium;
 
@@ -53,15 +53,13 @@
      font-size: 20px;
  }
 
- /* Container fpr Customer Details */
+ /* Table for Customer Details */
  #customer-details-container {
      width: 100%;
      background-color: rgba(247, 246, 246, 0.977);
      border: rgba(211, 211, 211, 0.916) solid;
      border-width: thin;
-     height: 150px;
-     margin-left: 140px;
-     padding: 10px 10px 10px 10px;
+     margin-top: -20px;
  }
 
  /* ORDER DETAILS */
@@ -71,20 +69,25 @@
      margin-top: 20px;
      margin-left: 12px;
      font-size: 20px;
-     margin-top: 30px;
+     margin-top: 10px;
  }
+
 
  #table1 {
      width: 100%;
      background-color: rgba(247, 246, 246, 0.977);
      border: rgba(211, 211, 211, 0.916) solid;
      border-width: thin;
+     margin-top: -20px;
+
  }
 
  td {
      border: rgba(211, 211, 211, 0.916) solid;
      border-width: thin;
-     padding: 15px;
+     padding: 8px;
+     font-family: 'Nunito', sans-serif;
+     font-size: 15px;
  }
 
  #item-title {
@@ -105,6 +108,8 @@
      margin-left: 12px;
      font-size: 20px;
      margin-top: 30px;
+     margin-top: 5px;
+
  }
 
  #table2 {
@@ -112,4 +117,54 @@
      background-color: rgba(247, 246, 246, 0.977);
      border: rgba(211, 211, 211, 0.916) solid;
      border-width: thin;
+     margin-top: -20px;
+
+ }
+
+
+ #payment-title {
+     font-family: 'Nunito', sans-serif;
+     font-size: 27px;
+     padding-left: 15px;
+     margin-top: 10px;
+ }
+
+ input[type='radio'] {
+     border: 2px solid #ccc;
+     border-radius: 50%;
+     width: 15px;
+     height: 20px;
+     margin-left: 30px;
+     outline: none;
+ }
+
+
+ #pay-button {
+     margin-top: 5px;
+     width: 200px;
+     height: 40px;
+     text-align: center;
+     border: none;
+     background-color: #ea8922;
+     color: white;
+     font-size: 20px;
+     border-radius: 10px;
+     margin-left: 35%;
+
+ }
+
+ #pay-button:hover {
+     background-color: #ea8922;
+     opacity: 80%;
+ }
+
+ #payment_method_cash {
+     font-size: 20px;
+     font-family: 'Nunito', sans-serif;
+     margin-top: -30px;
+ }
+
+ #payment_method_card {
+     font-size: 20px;
+     font-family: 'Nunito', sans-serif;
  }

@@ -14,25 +14,81 @@
     <div id="form-body">
         <!-- Logo -->
         <div id="image-background">
+            <!-- Donut Image Left -->
             <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
             <h1 id="dropping-donuts-title">Dropping Donuts</h1>
+            <!-- Donut Image Right -->
             <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
         </div>
 
         <!-- Client Details -->
         <h4 id="customer-details-title">Customer Details:</h4>
 
-        <div id="customer-details-container">
-            <p>Name: <?php echo htmlspecialchars($_GET['name']); ?></p>
-            <p>Email: <?php echo htmlspecialchars($_GET['email']); ?></p>
-            <p>Contact Number: <?php echo htmlspecialchars($_GET['contact']); ?></p>
-            <p>Collection Date: <?php echo htmlspecialchars($_GET['date']); ?></p>
-            <p>Collection Time: <?php echo htmlspecialchars($_GET['time']); ?></p>
-        </div>
+        <!-- This container outputs the clients details -->
+
+        <table id="customer-details-container">
+            <!-- Table Row: Name -->
+            <tr>
+                <td>
+                    <p>Name: </p>
+                </td>
+                <td>
+                    <?php echo htmlspecialchars($_GET['name']); ?>
+                </td>
+
+            </tr>
+
+            <!-- Table Row: Email -->
+            <tr>
+                <td>
+                    <p>Email: </p>
+                </td>
+                <td>
+                    <?php echo htmlspecialchars($_GET['email']); ?>
+                </td>
+
+            </tr>
+
+            <!-- Table Row: Contact Number -->
+            <tr>
+                <td>
+                    <p>Contact Number: </p>
+
+                </td>
+
+                <td>
+                    <?php echo htmlspecialchars($_GET['contact']); ?>
+                </td>
+            </tr>
+
+            <!-- Table Row: Collection Date -->
+            <tr>
+                <td>
+                    <p>Collection Date: </p>
+
+                </td>
+                <td>
+                    <?php echo htmlspecialchars($_GET['date']); ?>
+                </td>
+            </tr>
+
+            <!-- Table Row: Collection Time -->
+            <tr>
+                <td>
+                    <p>Collection Time: </p>
+                </td>
+                <td>
+                    <?php echo htmlspecialchars($_GET['time']); ?>
+                </td>
+            </tr>
+        </table>
+
+
 
         <!-- Order Details Below: -->
         <h4 id="order-details-title">Order Details:</h4>
 
+        <!-- The below div has a table, this table will display the data in a more structured manner. -->
         <div class="order-details">
             <table id="table1">
 
@@ -41,15 +97,17 @@
                     <th id="cost-title">Cost</th>
                 </tr>
 
+                <!-- Table Row to display the Plain Donut -->
                 <tr>
                     <td>Plain Donut:
-                        <!-- <?php echo htmlspecialchars($_GET['plainDonut']); ?> -->
+                        <!-- This echo's out the clients stored data for Plain Donut -->
+                        <?php echo htmlspecialchars($_GET['plainDonut']); ?>
                     </td>
                     <td><?php
                         /*
                         * Check if plainDonutCost is set in the query string
-                        *If its set, the value is retrieved using $_GET 
-                        *number_format is used to display it as currency value
+                        * If its set, the value is retrieved using $_GET 
+                        * number_format is used to display it as currency value
                         */
                         if (isset($_GET['plainDonutCost'])) {
                             $plainDonutCost = $_GET['plainDonutCost'];
@@ -57,9 +115,11 @@
                         } ?> </td>
                 </tr>
 
+                <!-- Table Row to display the Glaze -->
                 <tr>
                     <td>
                         Glaze:
+                        <!-- This echo's out the clients choice of glaze stored in the processForm.php page-->
                         <?php echo htmlspecialchars($_GET['glazeSelect']); ?>
                     </td>
                     <td>
@@ -74,6 +134,7 @@
                     </td>
                 </tr>
 
+                <!-- Table Row to display the Toppings -->
                 <tr>
                     <td>Toppings:
                         <ul>
@@ -90,7 +151,7 @@
                         </ul>
                     </td>
                     <td>
-                        <!-- Display the total cost of all toppings -->
+                        <!-- Display the SubTotal-->
                         <?php
                         $totalToppingCost = $toppingCost * count($toppings);
                         echo "R" . number_format($totalToppingCost, 2);
@@ -116,6 +177,7 @@
                     </td>
                 </tr>
 
+                <!-- Table Row to display the Subtotal -->
                 <tr>
                     <td>
                         <h4>Subtotal</h4>
@@ -123,6 +185,8 @@
 
                     <td>
                         <h4>
+                            <!-- Checks if the Subtotal variable is set in the string query -->
+                            <!-- If its set, the value is retrieved using $_GET number_format is used to display it as currency value -->
                             <?
                             if (isset($_GET['totalPriceOfSingleDonut'])) {
                                 $priceOfSingleDonut = $_GET['totalPriceOfSingleDonut'];
@@ -135,19 +199,23 @@
                 </tr>
             </table>
 
+            <!-- The below displays another table, which holds the data for the number of donuts & the total of the order -->
             <h4 id="order-total-title">Order Total:</h4>
 
             <table id="table2">
+                <!-- Table Row for number of donuts -->
                 <tr>
                     <td>
                         Number of Donuts:
 
                     </td>
                     <td>
+                        <!-- This code displays the number of donuts selected by the client, this data is stored in the processForm.php page -->
                         <?php echo htmlspecialchars($_GET['numberOfDonuts']); ?>
                     </td>
                 </tr>
 
+                <!-- Table Row for Order Total -->
                 <tr>
                     <td>
                         <h4>
@@ -157,6 +225,8 @@
 
                     <td>
                         <h4>
+                            <!-- Checks if the order total variable is set in the query string -->
+                            <!-- If its set, the value is retrieved using $_GET number_format is used to display it as currency value -->
                             <?
                             if (isset($_GET['donutTotalOrder'])) {
                                 $getOrderTotal = $_GET['donutTotalOrder'];
@@ -169,6 +239,21 @@
                 </tr>
 
             </table>
+
+            <h4 id="payment-title">Payment:</h4>
+            <form action="successful.php" method="post" id="payment-form">
+
+                <label for="payment_method_cash" id="payment_method_cash">
+                    <input type="radio" id="payment_method_cash" name="payment_method" value="cash" <?php if ($_POST['payment_method'] == 'cash') echo 'checked="checked"'; ?>>
+                    Cash
+                </label> <br>
+                <label for="payment_method_card" id="payment_method_card">
+                    <input type="radio" id="payment_method_card" name="payment_method" value="card" <?php if ($_POST['payment_method'] == 'card') echo 'checked="checked"'; ?>>
+                    Card
+                </label> <br>
+
+                <input type="submit" value="Pay" id="pay-button">
+            </form>
 
 
         </div>
