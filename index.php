@@ -51,7 +51,7 @@
 
                 <input type="checkbox" name="plain-donut-checkbox" id="plain-donut-checkbox" required value="Plain Donut">
 
-                <img src="images/plain donut 1.jpg" alt="plain-donut">
+                <img src="images/plain donut.jpg" alt="plain-donut">
 
 
                 <div class="cardBody-1">
@@ -88,7 +88,7 @@
                     <!-- None -->
                     <div id="none-box">
                         <label for="none-label" name="none-label" id="none-label">None:</label>
-                        <input type="checkbox" name="toppings[]" id="none-checkbox" value="None">
+                        <input type="checkbox" name="toppings[]" id="none-checkbox" value="None" onchange="toggleCheckboxes()">
                     </div>
 
                     <!-- Sprinkles -->
@@ -171,7 +171,8 @@
     </div>
 
 
-
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

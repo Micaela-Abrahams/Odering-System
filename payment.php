@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet Link -->
     <link rel="stylesheet" href="css/payment.css">
     <title>Check Out Page:</title>
 </head>
@@ -244,7 +245,7 @@
             <form action="successful.php" method="post" id="payment-form">
 
                 <label for="payment_method_cash" id="payment_method_cash">
-                    <input type="radio" id="payment_method_cash" name="payment_method" value="cash" <?php if ($_POST['payment_method'] == 'cash') echo 'checked="checked"'; ?>>
+                    <input type="radio" id="payment_method_cash" name="payment_method" value="cash" checked<?php if ($_POST['payment_method'] == 'cash') echo 'checked="checked"'; ?>>
                     Cash
                 </label> <br>
                 <label for="payment_method_card" id="payment_method_card">
