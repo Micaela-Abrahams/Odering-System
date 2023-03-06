@@ -1,3 +1,4 @@
+// This function checks for when the "None" checkbox was selcted.
 function toggleCheckboxes() {
 
   const noneCheckbox = document.getElementById("none-checkbox");
@@ -9,6 +10,7 @@ function toggleCheckboxes() {
   const marshmallows = document.getElementById("marshmallow-checkbox");
   const coconutFlakes = document.getElementById("coconut-checkbox");
 
+  // If the "None checkbox was selected, all other checkboxes will be disabled, else if the "None" checkbox is unchecked, all other checkboxes will be enabled by setting the disabled function to false"
   if (noneCheckbox.checked) {
     sprinkles.disabled = true;
     chocolateChips.disabled = true;
