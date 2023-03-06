@@ -168,6 +168,9 @@
             <input type="submit" name="checkout" id="checkout" value="Submit Order">
 
         </form>
+
+        <!-- Error message for Toppings -->
+        <div id="error" style="display:none;">You can only select up to 3 options</div>
     </div>
 
 
