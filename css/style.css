@@ -351,6 +351,15 @@
       vertical-align: middle;
   }
 
+  /* Style for the Error Message to appear if more than 3 checkboxes were selected */
+  .errorMessage {
+      color: red;
+      margin-top: -95px;
+      margin-left: 200px;
+      font-size: 20px;
+  }
+
+
   /* Style for Filling Selection: */
   #filling-box {
       width: 350px;

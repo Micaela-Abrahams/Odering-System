@@ -94,19 +94,19 @@
                     <!-- Sprinkles -->
                     <div id="sprinkle-box">
                         <label for="sprinkles-label" name="sprinkles-label" id="sprinkles-label">Sprinkles:</label>
-                        <input type="checkbox" name="toppings[]" id="sprinkles-checkbox" value="Sprinkles">
+                        <input type="checkbox" name="toppings[]" id="sprinkles-checkbox" value="Sprinkles" onclick="checkToppings()">
                     </div>
 
                     <!-- Chocolate Chips -->
                     <div id="chocolate-chip-box">
                         <label for="chocolate-chip-label" name="chocolate-chip-label" id="chocolate-chip-label">Chocolate Chips:</label>
-                        <input type="checkbox" name="toppings[]" id="chocolate-chip-checkbox" value="Chocolate Chips">
+                        <input type="checkbox" name="toppings[]" id="chocolate-chip-checkbox" value="Chocolate Chips" onclick="checkToppings()">
                     </div>
 
                     <!-- Nuts -->
                     <div id="nuts-box">
                         <label for="nuts-label" name="nuts-label" id="nuts-label">Nuts:</label>
-                        <input type="checkbox" name="toppings[]" id="nuts-checkbox" value="Nuts">
+                        <input type="checkbox" name="toppings[]" id="nuts-checkbox" value="Nuts" onclick="checkToppings()">
                     </div>
 
                 </div>
@@ -115,27 +115,30 @@
                     <!-- Icing -->
                     <div id="icing-box">
                         <label for="icing-label" name="icing-label" id="icing-label">Icing Sugar:</label>
-                        <input type="checkbox" name="toppings[]" id="icing-checkbox" value="Icing Sugar">
+                        <input type="checkbox" name="toppings[]" id="icing-checkbox" value="Icing Sugar" onclick="checkToppings()">
                     </div>
 
                     <!-- Caramel -->
                     <div id="caramel-box">
                         <label for="caramel-label" name="caramel-label" id="caramel-label">Caramel:</label>
-                        <input type="checkbox" name="toppings[]" id="caramel-checkbox" value="Caramel">
+                        <input type="checkbox" name="toppings[]" id="caramel-checkbox" value="Caramel" onclick="checkToppings()">
                     </div>
 
                     <!-- Marshmallows -->
                     <div id="marshmallow-box">
                         <label for="marshmallow-label" name="marshmallow-label" id="marshmallow-label">Marshmallows:</label>
-                        <input type="checkbox" name="toppings[]" id="marshmallow-checkbox" value="Marshmallows">
+                        <input type="checkbox" name="toppings[]" id="marshmallow-checkbox" value="Marshmallows" onclick="checkToppings()">
                     </div>
 
                     <!-- Coconut -->
                     <div id="coconut-box">
                         <label for="coconut-label" name="coconut-label" id="coconut-label">Coconut Flakes:</label>
-                        <input type="checkbox" name="toppings[]" id="coconut-checkbox" value="Coconut Flakes">
+                        <input type="checkbox" name="toppings[]" id="coconut-checkbox" value="Coconut Flakes" onclick="checkToppings()">
                     </div>
                 </div>
+
+                <!-- Error Message to appear -->
+                <p id="error-message" class="errorMessage"></p>
             </div>
 
             <!-- Select a Filing: -->
@@ -175,7 +178,7 @@
 
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

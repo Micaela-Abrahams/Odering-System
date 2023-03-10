@@ -1,4 +1,4 @@
-// This function checks for when the "None" checkbox was selcted.
+// This function checks for when the "None" checkbox was selected.
 function toggleCheckboxes() {
 
   const noneCheckbox = document.getElementById("none-checkbox");
@@ -30,5 +30,24 @@ function toggleCheckboxes() {
   }
   
 }
+
+//This function checks if more than 3 checkboxes have been selected for the Toppings:
+function checkToppings(){
+  const checkboxes = document.querySelectorAll('input[type="checkbox"][name="toppings[]"]:checked');
+
+  // If the checkbox length is greater than 3 the below message will appear in p tag with an ID of 'error-message', Else the p tag with an ID of 'error-message' will be empty
+  if (checkboxes.length > 3) {
+    document.getElementById("error-message").innerText = "Please select a maximum of 3 toppings.";
+  } else {
+    document.getElementById("error-message").innerText = "";
+  }
+}
+
+
+
+
+
+
+
 
 
