@@ -1,4 +1,4 @@
-<?
+<?php
 // Check if the Form was submitted:
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     /*
     * Total Cost of Order Subtotal x Number of Donuts:
     * This function is created to calculate the cost of the total order.
-    * This function take 2 parameters, the number of donuts variable ($numberOfDonuts) & the subtotal variable (             $totalPriceOfSingleDonut).
+    * This function take 2 parameters, the number of donuts variable ($numberOfDonuts) & the subtotal variable ($totalPriceOfSingleDonut).
     * Variable  $orderTotal is initialized to multiply & store the multiplied calculation  between $numberOfDonuts & $orderTotal.
     * The total of this calculation is then returned & stored as the value of the getOrderTotal function
     */
@@ -117,6 +117,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     * Redirect User to Payment Page 
     * The below header stores all the variables needed to be used & displayed in the payment.php page.
     */
-    header('Location: payment.php?name=' . urlencode($name) . '&email=' . urlencode($email) . '&contact=' . urlencode($contact) . '&date=' . urlencode($date) . '&time=' . urlencode($time) . '&plainDonut=' . urlencode($plainDonut) . '&glazeSelect=' . urlencode($glazeSelect) . '&toppings=' . urlencode(implode(',', $toppings)) . '&fillingSelect=' . urlencode($fillingSelect) . '&numberOfDonuts=' . urlencode($numberOfDonuts) . '&plainDonutCost=' . urlencode($plainDonutCost) . '&glazeCost=' . urldecode($glazeCost) . '&fillingCost=' . urldecode($fillingCost) . '&toppingCost=' . urldecode($toppingCost) . '&totalPriceOfSingleDonut=' . urldecode($totalPriceOfSingleDonut) . '&donutTotalOrder=' . urldecode($donutTotalOrder));
+    header('Location: ./payment.php?name=' . urlencode($name) . '&email=' . urlencode($email) . '&contact=' . urlencode($contact) . '&date=' . urlencode($date) . '&time=' . urlencode($time) . '&plainDonut=' . urlencode($plainDonut) . '&glazeSelect=' . urlencode($glazeSelect) . '&toppings=' . urlencode(implode(',', $toppings)) . '&fillingSelect=' . urlencode($fillingSelect) . '&numberOfDonuts=' . urlencode($numberOfDonuts) . '&plainDonutCost=' . urlencode($plainDonutCost) . '&glazeCost=' . urldecode($glazeCost) . '&fillingCost=' . urldecode($fillingCost) . '&toppingCost=' . urldecode($toppingCost) . '&totalPriceOfSingleDonut=' . urldecode($totalPriceOfSingleDonut) . '&donutTotalOrder=' . urldecode($donutTotalOrder));
     exit();
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Ordering System:</title>
 </head>
 
@@ -15,16 +15,16 @@
         <!-- Logo -->
         <div id="image-background">
             <!-- Donut Image Left -->
-            <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
+            <img src="../images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
             <h1 id="dropping-donuts-title">Dropping Donuts</h1>
             <!-- Donut Image Right -->
-            <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
+            <img src="../images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
         </div>
         <h3 class="order-form-title">Donut Order Form:</h3>
         <p class="requirements">Enter your details for the below required fields.</p>
 
         <!-- Form -->
-        <form action="processForm.php" method="post">
+        <form action="../php/processForm.php" method="post">
 
             <div id="form-inputs-box">
                 <label for="firstName">First Name:</label>
@@ -51,7 +51,7 @@
 
                 <input type="checkbox" name="plain-donut-checkbox" id="plain-donut-checkbox" required value="Plain Donut">
 
-                <img src="images/plain donut.jpg" alt="plain-donut">
+                <img src="../images/plain donut.jpg" alt="plain-donut">
 
 
                 <div class="cardBody-1">

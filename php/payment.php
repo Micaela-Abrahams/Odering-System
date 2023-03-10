@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheet Link -->
-    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="../css/payment.css">
     <title>Check Out Page:</title>
 </head>
 
@@ -16,10 +16,10 @@
         <!-- Logo -->
         <div id="image-background">
             <!-- Donut Image Left -->
-            <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
+            <img src="../images/animated donut.png" alt="logo" width="100px" id="brand-logo-1">
             <h1 id="dropping-donuts-title">Dropping Donuts</h1>
             <!-- Donut Image Right -->
-            <img src="images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
+            <img src="../images/animated donut.png" alt="logo" width="100px" id="brand-logo-2">
         </div>
 
         <!-- Client Details -->
